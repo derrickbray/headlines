@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   apiUrl = 'https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=' + this.apiKey;
   headlines: any = [];
 
-  Sources: any = [
+  sources: any = [
     {name: 'ABC News (AU)', url:'abc-news-au'},
     {name: 'Al Jazeera English', url:'al-jazeera-english'},
     {name: 'Ars Technica', url:'ars-technica'},
