@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
 
   apiKey = '0762c970c10a41af86c6257f0bfe0414';
-  apiUrl = 'https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey' + this.apiKey;
+  apiUrl = 'https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=' + this.apiKey;
   headlines: any = [];
 
   Sources: any = [
@@ -81,7 +81,7 @@ export class AppComponent implements OnInit {
   };
 
   updateHeadlines(provider) {
-    this.http.get('https://newsapi.org/v1/articles?source' + provider + '&sortBy=top&apiKey=' + this.apiKey)
+    this.http.get('https://newsapi.org/v1/articles?source=' + provider + '&sortBy=top&apiKey=' + this.apiKey)
     .subscribe(data => {
       let info = data;
       this.headlines = info['articles'];
