@@ -81,6 +81,7 @@ export class AppComponent implements OnInit {
   };
 
   updateHeadlines(provider) {
+
     this.http.get('https://newsapi.org/v1/articles?source=' + provider + '&sortBy=top&apiKey=' + this.apiKey)
     .subscribe(data => {
       let info = data;

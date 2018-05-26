@@ -3,7 +3,7 @@
     <div class="left">
       <div class="nav">
         <div *ngFor="let news of sources" class="option">
-          <h3 class="old" id="{{news.ID}}" (click)="updateHeadlines(news.url)">{{news.name}}</h3>
+          <h3 class="old" id="{{news.url}}" (click)="updateHeadlines(news.url)">{{news.name}}</h3>
         </div>
         <a href="https://newsapi.org" class="power">Powered by NewsAPI.org</a>
       </div>
